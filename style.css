@@ -1,0 +1,337 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #e50914;
+    --dark-color: #141414;
+    --light-color: #f4f4f4;
+}
+body{
+    background-color: #000;
+    color: #999;
+}
+.container{
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+}
+header{
+    height: 100vh;
+    padding: 10px 40px;
+    background: url(https://i.ibb.co/vXqDmnh/background.jpg) no-repeat center center/cover;
+    position: relative;
+    overflow: hidden;
+}
+header::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+.sign-btn{
+    padding: 7px 5px;
+    color: #f4f4f4;
+    background-color: #e50914;
+    border: none;
+    z-index: 99999;
+    border-radius: 6px;
+}
+.navbar{
+display: flex;
+justify-content: space-between;
+align-items: end;
+}
+.navbar .image{
+    flex: 2;
+    text-align: center;
+    z-index: 99;
+}
+.navbar img{
+width: 170px;
+}
+@media screen and (max-width: 480px) {
+    .navbar img{
+        width: 80px;
+        position: absolute;
+        left: 20px;
+     top: 17px;
+    }
+    
+}
+.intro{
+    z-index: 999;
+    color: #f4f4f4;
+    position: relative;
+    width: 50%;
+    text-align: center;
+    top: 30%;
+    left: 25%;
+    line-height: 1.4;
+}
+.intro h1{
+font-weight: bold;
+font-size: 100px;
+}
+
+.intro p {
+    font-weight: normal;
+    font-size: 30px;
+}
+.intro button{
+    padding: 7px 5px;
+    color: #f4f4f4;
+    background-color: #e50914;
+    border: none;
+    margin-top: 10px;
+    width: 400px;
+    height: 70px;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+@media screen and (max-width: 480px) {
+   .intro h1{
+    font-size: 30px;
+   }
+   .intro p{
+    font-size: 15px;
+   }
+   .intro button{
+    width: 161px;
+    font-size: 15px;
+
+   }
+    
+}
+/***********Tabs section**************/
+.tabs-sec{
+    background-color: #141414;
+    color: #999;
+    border-bottom: 1px solid #999;
+}
+.tabs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 0;
+}
+.tabs .tab{
+text-align: center;
+padding: 1.5rem 0;
+font-size: 25px;
+}
+@media screen and (max-width: 480px) {
+    .tabs .tab{
+        font-size: 15px;
+    }
+    .tabs .tab p{
+        display: none;
+    }
+}
+.tabs .tab:hover{
+    color: white;
+}
+.tab-border{
+    border-bottom: 4px solid var(--primary-color);
+}
+.tabs .tab i{ 
+    margin-bottom: 10px;
+
+}
+/***********content section**************/
+.content{
+margin-top: 30px;
+}
+.content .tab-1-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+.content .tab-1-content .texts{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 50px;
+}
+.content .tab-1-content .texts button{
+    width: 60%;
+    background-color: #e50914;
+    color: #141414;
+    padding: 20px 5px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+
+}
+.content .container .show{
+    display: block;
+}
+.content .tab-1-content.show{
+    display: flex;
+}
+.content .tab-1-content img{
+    width: 40%;
+}
+/*tab-2*/
+.tab-2-content{
+display: none;
+}
+.tab-2-content .texts
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.tab-2-content .texts p{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    width: 50%;
+}
+.tab-2-content .texts button{
+    background-color: #e50914;
+    padding: 20px 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+
+}
+.screens{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-top: 20px;
+}
+.screens .screen{
+    text-align: center;
+    width: calc(100% / 3);
+
+}
+@media screen and (max-width:480px){
+    .tab-2-content .texts{
+        display: block;
+    }
+    .tab-2-content .texts p{
+        font-size: 15px;
+        margin: auto;
+    }
+    .screens{
+        display: block;
+    }
+    .screens .screen{
+        width: 100% ;
+    
+    }
+    
+}
+.screens .screen img{
+    width: 100%;
+    transition: 1s ease-in-out;
+    
+}
+.screens .screen img:hover{
+transform: scale(1.2);
+}
+.screens .screen h3{ 
+    color: white;
+    margin-bottom: 15px;
+    
+}
+/*tab 3 */
+.tab-3-content{
+    text-align: center;
+    display: none;
+}
+.tab-3-content h1{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.tab-3-content button{
+    background-color: #e50914;
+    padding: 20px 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 30px;
+}
+/*TABLE style*/
+table{
+width: 100%;
+border-collapse: collapse;
+    border-spacing: 0;
+    overflow-x: scroll;
+
+}
+table thead {
+
+}
+table thead tr {
+    
+}
+table thead tr th {
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+}
+table tbody tr:nth-child(odd) {
+    background-color: #141414;
+}
+table tbody tr td {
+    border: none;
+    padding: 15px;
+}
+table tbody tr td:first-child{
+    text-align: left;
+}
+@media screen and (max-width: 480px) {
+    .tab-3-content h1 {
+        font-size: 20px;
+    }
+    .tab-3-content button {
+        font-size: 12px;
+    }
+    table tbody tr td {
+        padding: 15px 10px;
+    }
+    .tab-1-content p{
+        font-size: 15px;
+    }
+    .content .tab-1-content .texts button {
+        width: 100%;
+        font-size: 10px;
+    }
+    
+}
+/*footer*/
+footer{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #999;
+    margin-top: 20px;
+}
+footer >div img{
+    width: 100px;
+
+}
